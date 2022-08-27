@@ -1,0 +1,31 @@
+#função que mostra uma linha para separar e organizar os codigos
+def linha():
+   print('-'*30)  
+    
+linha()
+#mostra a data
+from datetime import datetime 
+today=datetime.today ()
+print(today)
+linha()
+
+print('Calculadora de custos de frete de moto')
+linha()
+print('Escolha qual serviço deseja utilizar \n')
+servico=input('1-Moto Taxi/ 2-Moto Frete \n')
+valor_fixo= 5.00
+valor_deslocamento=3.0
+
+trajeto=int(input('Digite a distancia aproximada em km: \n'))
+
+if servico== ('1'):
+   valor_cobrar=(trajeto*0.9)+    valor_fixo
+   total=(valor_cobrar+      valor_deslocamento)
+   print(trajeto,'km')
+   print('R$:',total)
+else:
+   valor_cobrar=(trajeto *2.0)+valor_fixo
+   total=(valor_cobrar +   valor_deslocamento)
+   print(trajeto, 'km')
+   print('R$:',total)
+   
